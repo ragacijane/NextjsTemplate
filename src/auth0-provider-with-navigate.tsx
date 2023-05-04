@@ -18,7 +18,6 @@ export const Auth0ProviderWithNavigate = ({ children } : Auth0ProviderWithNaviga
   };
 
   if (!(domain && clientId && redirectUri)) {
-      console.log('ne cita')
     return null;
   }
 
