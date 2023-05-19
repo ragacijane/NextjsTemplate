@@ -1,14 +1,24 @@
-import { Route, Routes } from 'react-router-dom';
-import { HomePage } from './pages/homepage';
-import { CallbackPage } from './pages/callback-page';
+
+import { Topbar } from "./scenes/global/Topbar";
+import { ColorModeContext, useMode } from "./theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import React from 'react'
 
 
 function App() {
+  const [theme, colorMode] = useMode();
+
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/callback" element={<CallbackPage />} />
-    </Routes>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className='app' >
+          <main className="content">
+            <Topbar/>
+          </main>
+        </div>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
 
