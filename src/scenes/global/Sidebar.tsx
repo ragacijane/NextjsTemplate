@@ -73,11 +73,11 @@ export const MainSidebar = () => {
           },
         }}
       >
-        <Sidebar >
+        <Sidebar defaultCollapsed={isCollapsed}>
           <Menu>
             {/* LOGO AND MENU ICON */}
             <MenuItem
-              onClick={() => collapseSidebar()}
+              onClick={() => {collapseSidebar(); setIsCollapsed(!isCollapsed)}}
               icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
               style={{
                 margin: "10px 0 20px 0",
@@ -92,7 +92,7 @@ export const MainSidebar = () => {
                   ml="15px"
                 >
                   <Typography variant="h3" color={colors.grey[100]}>
-                    ADMINIS
+                    Woodili
                   </Typography>
                   <IconButton onClick={() => collapseSidebar()}>
                     <MenuOutlinedIcon />
