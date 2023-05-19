@@ -108,7 +108,7 @@ export const MainSidebar = () => {
                     alt="profile-user"
                     width="100px"
                     height="100px"
-                    src={`../../assets/user.png`}
+                    src={`https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-default-male-avatar-png-image_2811083.jpg`}
                     style={{ cursor: "pointer", borderRadius: "50%" }}
                   />
                 </Box>
@@ -119,10 +119,10 @@ export const MainSidebar = () => {
                     fontWeight="bold"
                     sx={{ m: "10px 0 0 0" }}
                   >
-                    Ed Roh
+                    Ime
                   </Typography>
                   <Typography variant="h5" color={colors.greenAccent[500]}>
-                    VP Fancy Admin
+                    Prezime
                   </Typography>
                 </Box>
               </Box>
