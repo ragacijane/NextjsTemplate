@@ -9,16 +9,18 @@ const navigation = (): VerticalNavItemsType => {
       icon: 'mdi:home-outline',
     },
     {
-      title: 'Second Page',
-      path: '/second-page',
-      icon: 'mdi:email-outline',
-    },
-    {
       path: '/acl',
       action: 'read',
       subject: 'acl-page',
       title: 'Access Control',
       icon: 'mdi:shield-outline',
+    },
+    {
+      title: 'Home',
+      action:'read',
+      path: '/employee-home',
+      subject: 'employee-home-page',
+      icon: 'mdi:home-outline',
     },
     {
       path: '/qr-scanner',
