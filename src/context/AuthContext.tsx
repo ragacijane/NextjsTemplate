@@ -45,7 +45,7 @@ const AuthProvider = ({ children }: Props) => {
         await axios
           .get(authConfig.meEndpoint, {
             headers: {
-              Authorization: storedToken
+              Authorization: 'Bearer '+storedToken
             }
           })
           .then(async response => {
@@ -72,11 +72,13 @@ const AuthProvider = ({ children }: Props) => {
   }, [])
 
   const handleLogin = (params: LoginParams, errorCallback?: ErrCallbackType) => {
-    axios
+    console.log(authConfig.loginEndpoint)
+     axios
       .post(authConfig.loginEndpoint, params)
-      .then(async response => {
+      .then(response => {
+        console.log(response)
         params.rememberMe
-          ? window.localStorage.setItem(authConfig.storageTokenKeyName, response.data.accessToken)
+          ? window.localStorage.setItem(authConfig.storageTokenKeyName, response.data.access_token)
           : null
         const returnUrl = router.query.returnUrl
 
@@ -84,7 +86,7 @@ const AuthProvider = ({ children }: Props) => {
         params.rememberMe ? window.localStorage.setItem('userData', JSON.stringify(response.data.userData)) : null
 
         const redirectURL = returnUrl && returnUrl !== '/' ? returnUrl : '/'
-
+       
         router.replace(redirectURL as string)
       })
 

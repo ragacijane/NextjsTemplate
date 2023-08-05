@@ -25,7 +25,7 @@ const defineRulesFor = (role: string, subject: string) => {
     cannot('read', 'acl-page')
     cannot('read', 'qr-scanner-page')
     
-  } else if (role === 'client') {
+  } else if (role === 'employee' || role ===' manager') {
     can(['read'],'employee-home-page')
     can(['read'], 'qr-scanner-page')
   } else {
