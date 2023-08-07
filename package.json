@@ -40,6 +40,7 @@
     "axios-mock-adapter": "1.21.2",
     "bootstrap-icons": "1.10.3",
     "chart.js": "4.2.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "cleave.js": "1.6.0",
     "clipboard-copy": "4.0.1",
     "clsx": "1.2.1",

@@ -28,7 +28,18 @@ const navigation = (): VerticalNavItemsType => {
       subject: 'qr-scanner-page',
       title: 'QR Scanner',
       icon: 'mdi:qrcode', 
-    }
+    },
+    {
+      title: 'Workhours & salaries',
+      icon: 'mdi:clock',
+      path: '/chartjs',
+    },
+    {
+      title: 'Users',
+      icon: 'mdi:account-outline',
+      path: '/apps/user/list'
+    },
+        
   ]
 }
 
